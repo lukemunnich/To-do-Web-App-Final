@@ -5,11 +5,6 @@ session_start();
 
 require_once 'function/functions.php';
 isUserLoggedin();
-// if(isset($_SESSION["loggedin"])&& $_SESSION["loggedin"]=== true){
-
-//     header("location: welcome.php");
-//     exit;
-// }
 require_once "config/conn.php";
 //define variables and initialize with empty values
 
@@ -53,19 +48,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             
             //Bind variables to the prepared statement as parameters
 
-            $stmt->bindParam(":username",$param_username,PDO::PARAM_STR);
+        $stmt->bindParam(":username",$param_username,PDO::PARAM_STR);
 
             //set parameters
-            $param_username = $username;
+        $param_username = $username;
 
             //Attempt to execute the prepared statement
             
-            if($stmt->execute()){
+        if($stmt->execute()){
                 //the prepared statement was successfully executed
                 //if the resource was succesfully created, and the number of rows is equla to 1.  now verify the password
-                var_dump($username);
+            var_dump($username);
 
-                if($stmt->rowCount() == 1){
+        if($stmt->rowCount() == 1){
 
                     if($data = $stmt->fetch()){
 
@@ -123,7 +118,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <!--Font awesome-->
     <script src="https://kit.fontawesome.com/0cd95c0d58.js" crossorigin="anonymous"></script>
     <!--Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
     <title>To Do Login</title>
 </head>
 <body class="login-body">
@@ -132,7 +127,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <div class="row">
         <div class="col-12 login-title text-center">
             <h1>Nav Task Manager</h1>
-            <p>Life is too short to not have your tasks in order.</p>
+            <p>organise and manage your daily tasks and keep on schedule </p>
         </div>
         </div>
     </div>
@@ -174,7 +169,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             </div>
             </div>
         </div>
-        <!--Login form-->
+      >
 
     </div>
     

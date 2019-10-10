@@ -42,7 +42,7 @@ function complete_task(id)
    }
   },
   error:function(request, status, error){
-    //   console.log(status);
+    
       
   }
  });

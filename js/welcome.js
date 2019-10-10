@@ -2,18 +2,7 @@ const addform = document.querySelector('.add');
 const list = document.querySelector('.todos');
 const search = document.querySelector('.search input')
 
-// const GENTEMPLATE = (todo,dates)=>{
 
-//     const html =    `
-//     <li class="list-group-item d-flex justify-content-between align-items-center">
-//     <span>${todo}</span>&nbsp<span>${dates}</span>
-//        <i class="fas fa-check"></i>
-//     <i class="far fa-trash-alt delete"></i>
-//     </li>`;
-
-//     list.innerHTML  += html;
-
-// };
 
 function GENTEMPLATE(todo,dates) {
     
@@ -26,13 +15,11 @@ function GENTEMPLATE(todo,dates) {
 
     list.innerHTML  += html;
 };
+
 addform.addEventListener('submit', event =>{
-    // event.preventDefault();
     const todo  =  addform.add.value.trim();
     const dates  = document.getElementById("duedate").value;
     console.log(todo);
-    //User cannot enter empty string as an input
-    //if statement below evaluates true if length of string is greater than 0.
     if(todo.length){
         GENTEMPLATE(todo,dates);
         addform.reset();
@@ -94,5 +81,4 @@ function delete_row(id)
     task_row.remove();
    }
   }
- });
-}
+ 
