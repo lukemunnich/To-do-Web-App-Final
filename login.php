@@ -126,7 +126,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <div class="container mt-4">
         <div class="row">
         <div class="col-12 login-title text-center">
-            <h1>Nav Task Manager</h1>
+            <h1> Task Manager</h1>
             <p>organise and manage your daily tasks and keep on schedule </p>
         </div>
         </div>
