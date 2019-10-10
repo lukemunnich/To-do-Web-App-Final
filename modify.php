@@ -93,7 +93,7 @@ if(isset($_POST["task_status"]))
     }
     }
     else{
-        var_dump($row); //"hello: ". $row["class"];
+        var_dump($row);
     }
 
     
