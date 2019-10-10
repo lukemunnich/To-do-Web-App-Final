@@ -11,6 +11,7 @@
     flex-direction:column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 20px;
 }
 .form-container{
     width:500px;
@@ -18,5 +19,5 @@
     background-color: beige;
     border-radius: 5px;
     padding: 2rem;
-    padding-bottom: 100px;
+    padding-bottom: 20px;
 }
